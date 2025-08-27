@@ -1,7 +1,7 @@
 import Component, { ComponentAttrs } from 'flarum/common/Component';
 import app from 'flarum/admin/app';
+import withAttr from 'flarum/common/utils/withAttr';
 import ListManager from '../common/ListManager';
-import LinkEditor from '../common/LinkEditor';
 import ImageEditor from '../common/ImageEditor';
 import { PlatformIcon } from '../common/FooterConfigTypes';
 
@@ -31,10 +31,9 @@ export default class PlatformIconsSection extends Component<PlatformIconsSection
                   type="text"
                   value={icon.title}
                   placeholder={app.translator.trans('wusong8899-custom-footer.admin.edit_footer.platform_title_placeholder')}
-                  onchange={(e: Event) => {
-                    const target = e.target as HTMLInputElement;
-                    updateItem({ ...icon, title: target.value });
-                  }}
+                  oninput={withAttr('value', (value: string) => {
+                    updateItem({ ...icon, title: value });
+                  })}
                 />
               </div>
 
@@ -45,10 +44,9 @@ export default class PlatformIconsSection extends Component<PlatformIconsSection
                   type="url"
                   value={icon.url}
                   placeholder="https://example.com"
-                  onchange={(e: Event) => {
-                    const target = e.target as HTMLInputElement;
-                    updateItem({ ...icon, url: target.value });
-                  }}
+                  oninput={withAttr('value', (value: string) => {
+                    updateItem({ ...icon, url: value });
+                  })}
                 />
               </div>
 

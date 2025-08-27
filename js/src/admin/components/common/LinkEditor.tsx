@@ -1,5 +1,6 @@
 import Component, { ComponentAttrs } from 'flarum/common/Component';
 import app from 'flarum/admin/app';
+import withAttr from 'flarum/common/utils/withAttr';
 
 export interface LinkData {
   title: string;
@@ -30,10 +31,9 @@ export default class LinkEditor extends Component<LinkEditorAttrs> {
             type="text"
             value={link.title}
             placeholder={app.translator.trans('wusong8899-custom-footer.admin.edit_footer.link_title_placeholder')}
-            onchange={(e: Event) => {
-              const target = e.target as HTMLInputElement;
-              onUpdate({ ...link, title: target.value });
-            }}
+            oninput={withAttr('value', (value: string) => {
+              onUpdate({ ...link, title: value });
+            })}
           />
         </div>
         
@@ -45,10 +45,9 @@ export default class LinkEditor extends Component<LinkEditorAttrs> {
               type="url"
               value={link.url}
               placeholder="https://example.com"
-              onchange={(e: Event) => {
-                const target = e.target as HTMLInputElement;
-                onUpdate({ ...link, url: target.value });
-              }}
+              oninput={withAttr('value', (value: string) => {
+                onUpdate({ ...link, url: value });
+              })}
             />
             {showRemove && onRemove && (
               <button

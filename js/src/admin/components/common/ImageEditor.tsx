@@ -1,5 +1,6 @@
 import Component, { ComponentAttrs } from 'flarum/common/Component';
 import app from 'flarum/admin/app';
+import withAttr from 'flarum/common/utils/withAttr';
 
 export interface ImageData {
   imageUrl: string;
@@ -29,10 +30,9 @@ export default class ImageEditor extends Component<ImageEditorAttrs> {
             type="url"
             value={image.imageUrl}
             placeholder="https://example.com/image.png"
-            onchange={(e: Event) => {
-              const target = e.target as HTMLInputElement;
-              onUpdate({ ...image, imageUrl: target.value });
-            }}
+            oninput={withAttr('value', (value: string) => {
+              onUpdate({ ...image, imageUrl: value });
+            })}
           />
         </div>
 
@@ -43,10 +43,9 @@ export default class ImageEditor extends Component<ImageEditorAttrs> {
             type="text"
             value={image.altText}
             placeholder={app.translator.trans('wusong8899-custom-footer.admin.edit_footer.image_alt_placeholder')}
-            onchange={(e: Event) => {
-              const target = e.target as HTMLInputElement;
-              onUpdate({ ...image, altText: target.value });
-            }}
+            oninput={withAttr('value', (value: string) => {
+              onUpdate({ ...image, altText: value });
+            })}
           />
         </div>
 
@@ -57,7 +56,13 @@ export default class ImageEditor extends Component<ImageEditorAttrs> {
               <img
                 src={image.imageUrl}
                 alt={image.altText}
-                style={{ maxWidth: '200px', maxHeight: '100px', objectFit: 'contain' }}
+                style={{ 
+                  maxWidth: '200px', 
+                  maxHeight: '100px', 
+                  objectFit: 'contain',
+                  opacity: '0', 
+                  transition: 'opacity 0.3s' 
+                }}
                 onload={(e: Event) => {
                   const target = e.target as HTMLImageElement;
                   target.style.opacity = '1';
@@ -67,7 +72,6 @@ export default class ImageEditor extends Component<ImageEditorAttrs> {
                   target.style.display = 'none';
                   target.parentElement!.innerHTML += `<div class="FooterConfig-imageError">${app.translator.trans('wusong8899-custom-footer.admin.edit_footer.image_load_error')}</div>`;
                 }}
-                style={{ opacity: '0', transition: 'opacity 0.3s' }}
               />
             </div>
           </div>
