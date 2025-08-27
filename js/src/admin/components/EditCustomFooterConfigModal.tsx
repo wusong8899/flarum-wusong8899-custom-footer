@@ -21,7 +21,7 @@ export default class EditCustomFooterConfigModal extends SettingsModal {
   }
 
   title() {
-    return app.translator.trans('core.admin.edit_footer.config_title');
+    return app.translator.trans('wusong8899-custom-footer.admin.edit_footer.config_title');
   }
 
   oninit(vnode: any) {
@@ -35,7 +35,7 @@ export default class EditCustomFooterConfigModal extends SettingsModal {
       this.config = FooterConfigManager.loadConfig();
     } catch (error) {
       console.error('Failed to load footer config:', error);
-      app.alerts.show({ type: 'error' }, app.translator.trans('core.admin.edit_footer.load_error'));
+      app.alerts.show({ type: 'error' }, app.translator.trans('wusong8899-custom-footer.admin.edit_footer.load_error'));
     } finally {
       this.loading = false;
       m.redraw();
@@ -79,7 +79,7 @@ export default class EditCustomFooterConfigModal extends SettingsModal {
             onclick={() => this.resetToDefaults()}
           >
             <i className="fas fa-undo"></i>
-            {app.translator.trans('core.admin.edit_footer.reset_defaults')}
+            {app.translator.trans('wusong8899-custom-footer.admin.edit_footer.reset_defaults')}
           </Button>
           
           <Button
@@ -88,7 +88,7 @@ export default class EditCustomFooterConfigModal extends SettingsModal {
             onclick={() => this.previewFooter()}
           >
             <i className="fas fa-eye"></i>
-            {app.translator.trans('core.admin.edit_footer.preview')}
+            {app.translator.trans('wusong8899-custom-footer.admin.edit_footer.preview')}
           </Button>
         </div>
       </div>
@@ -99,32 +99,32 @@ export default class EditCustomFooterConfigModal extends SettingsModal {
     return [
       {
         id: 'support-links',
-        title: app.translator.trans('core.admin.edit_footer.tab_support_links'),
+        title: app.translator.trans('wusong8899-custom-footer.admin.edit_footer.tab_support_links'),
         icon: 'fa-link'
       },
       {
         id: 'platform-icons',
-        title: app.translator.trans('core.admin.edit_footer.tab_platform_icons'),
+        title: app.translator.trans('wusong8899-custom-footer.admin.edit_footer.tab_platform_icons'),
         icon: 'fa-icons'
       },
       {
         id: 'platform-links',
-        title: app.translator.trans('core.admin.edit_footer.tab_platform_links'),
+        title: app.translator.trans('wusong8899-custom-footer.admin.edit_footer.tab_platform_links'),
         icon: 'fa-external-link-alt'
       },
       {
         id: 'brand-ambassador',
-        title: app.translator.trans('core.admin.edit_footer.tab_brand_ambassador'),
+        title: app.translator.trans('wusong8899-custom-footer.admin.edit_footer.tab_brand_ambassador'),
         icon: 'fa-user-tie'
       },
       {
         id: 'footer-logo',
-        title: app.translator.trans('core.admin.edit_footer.tab_footer_logo'),
+        title: app.translator.trans('wusong8899-custom-footer.admin.edit_footer.tab_footer_logo'),
         icon: 'fa-image'
       },
       {
         id: 'copyright',
-        title: app.translator.trans('core.admin.edit_footer.tab_copyright'),
+        title: app.translator.trans('wusong8899-custom-footer.admin.edit_footer.tab_copyright'),
         icon: 'fa-copyright'
       }
     ];
@@ -149,8 +149,8 @@ export default class EditCustomFooterConfigModal extends SettingsModal {
           <PlatformIconsSection
             icons={this.config.platformIcons}
             onUpdate={(icons) => this.updateConfig({ platformIcons: icons })}
-            sectionTitle={app.translator.trans('core.admin.edit_footer.platform_icons')}
-            helpText={app.translator.trans('core.admin.edit_footer.platform_icons_help')}
+            sectionTitle={app.translator.trans('wusong8899-custom-footer.admin.edit_footer.platform_icons')}
+            helpText={app.translator.trans('wusong8899-custom-footer.admin.edit_footer.platform_icons_help')}
           />
         );
 
@@ -159,8 +159,8 @@ export default class EditCustomFooterConfigModal extends SettingsModal {
           <PlatformIconsSection
             icons={this.config.platformLinks}
             onUpdate={(links) => this.updateConfig({ platformLinks: links })}
-            sectionTitle={app.translator.trans('core.admin.edit_footer.platform_links')}
-            helpText={app.translator.trans('core.admin.edit_footer.platform_links_help')}
+            sectionTitle={app.translator.trans('wusong8899-custom-footer.admin.edit_footer.platform_links')}
+            helpText={app.translator.trans('wusong8899-custom-footer.admin.edit_footer.platform_links_help')}
           />
         );
 
@@ -198,7 +198,7 @@ export default class EditCustomFooterConfigModal extends SettingsModal {
   }
 
   resetToDefaults() {
-    if (confirm(app.translator.trans('core.admin.edit_footer.reset_confirm'))) {
+    if (confirm(app.translator.trans('wusong8899-custom-footer.admin.edit_footer.reset_confirm'))) {
       this.config = FooterConfigManager.getDefaultConfig();
       m.redraw();
     }
@@ -211,7 +211,7 @@ export default class EditCustomFooterConfigModal extends SettingsModal {
       previewWindow.document.write(`
         <html>
           <head>
-            <title>${app.translator.trans('core.admin.edit_footer.preview_title')}</title>
+            <title>${app.translator.trans('wusong8899-custom-footer.admin.edit_footer.preview_title')}</title>
             <style>
               body { margin: 0; padding: 20px; font-family: Arial, sans-serif; }
               ${this.getPreviewStyles()}
@@ -308,11 +308,11 @@ export default class EditCustomFooterConfigModal extends SettingsModal {
     
     try {
       await FooterConfigManager.saveConfig(this.config);
-      app.alerts.show({ type: 'success' }, app.translator.trans('core.admin.edit_footer.save_success'));
+      app.alerts.show({ type: 'success' }, app.translator.trans('wusong8899-custom-footer.admin.edit_footer.save_success'));
       this.hide();
     } catch (error) {
       console.error('Failed to save footer config:', error);
-      app.alerts.show({ type: 'error' }, app.translator.trans('core.admin.edit_footer.save_error'));
+      app.alerts.show({ type: 'error' }, app.translator.trans('wusong8899-custom-footer.admin.edit_footer.save_error'));
     } finally {
       this.saving = false;
       m.redraw();

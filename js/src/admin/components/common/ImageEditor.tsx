@@ -17,8 +17,8 @@ export interface ImageEditorAttrs extends ComponentAttrs {
 export default class ImageEditor extends Component<ImageEditorAttrs> {
   view() {
     const { image, onUpdate, showPreview = true } = this.attrs;
-    const urlLabel = this.attrs.urlLabel || app.translator.trans('core.admin.edit_footer.image_url');
-    const altLabel = this.attrs.altLabel || app.translator.trans('core.admin.edit_footer.image_alt');
+    const urlLabel = this.attrs.urlLabel || app.translator.trans('wusong8899-custom-footer.admin.edit_footer.image_url');
+    const altLabel = this.attrs.altLabel || app.translator.trans('wusong8899-custom-footer.admin.edit_footer.image_alt');
 
     return (
       <div className="FooterConfig-imageEditor">
@@ -42,7 +42,7 @@ export default class ImageEditor extends Component<ImageEditorAttrs> {
             className="FormControl"
             type="text"
             value={image.altText}
-            placeholder={app.translator.trans('core.admin.edit_footer.image_alt_placeholder')}
+            placeholder={app.translator.trans('wusong8899-custom-footer.admin.edit_footer.image_alt_placeholder')}
             onchange={(e: Event) => {
               const target = e.target as HTMLInputElement;
               onUpdate({ ...image, altText: target.value });
@@ -52,7 +52,7 @@ export default class ImageEditor extends Component<ImageEditorAttrs> {
 
         {showPreview && image.imageUrl && (
           <div className="Form-group">
-            <label>{app.translator.trans('core.admin.edit_footer.preview')}</label>
+            <label>{app.translator.trans('wusong8899-custom-footer.admin.edit_footer.preview')}</label>
             <div className="FooterConfig-imagePreview">
               <img
                 src={image.imageUrl}
@@ -65,7 +65,7 @@ export default class ImageEditor extends Component<ImageEditorAttrs> {
                 onerror={(e: Event) => {
                   const target = e.target as HTMLImageElement;
                   target.style.display = 'none';
-                  target.parentElement!.innerHTML += `<div class="FooterConfig-imageError">${app.translator.trans('core.admin.edit_footer.image_load_error')}</div>`;
+                  target.parentElement!.innerHTML += `<div class="FooterConfig-imageError">${app.translator.trans('wusong8899-custom-footer.admin.edit_footer.image_load_error')}</div>`;
                 }}
                 style={{ opacity: '0', transition: 'opacity 0.3s' }}
               />

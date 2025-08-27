@@ -69,7 +69,7 @@ export default class ListManager<T> extends Component<ListManagerAttrs<T>> {
             onclick={() => this.addItem()}
           >
             <i className="fas fa-plus"></i>
-            {addButtonText || app.translator.trans('core.admin.edit_footer.add_item')}
+            {addButtonText || app.translator.trans('wusong8899-custom-footer.admin.edit_footer.add_item')}
           </button>
         )}
       </div>

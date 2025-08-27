@@ -25,12 +25,12 @@ export default class PlatformIconsSection extends Component<PlatformIconsSection
           renderItem={(icon: PlatformIcon, index: number, updateItem: (icon: PlatformIcon) => void, removeItem: () => void) => (
             <div className="FooterConfig-platformIcon">
               <div className="Form-group">
-                <label>{app.translator.trans('core.admin.edit_footer.platform_title')}</label>
+                <label>{app.translator.trans('wusong8899-custom-footer.admin.edit_footer.platform_title')}</label>
                 <input
                   className="FormControl"
                   type="text"
                   value={icon.title}
-                  placeholder={app.translator.trans('core.admin.edit_footer.platform_title_placeholder')}
+                  placeholder={app.translator.trans('wusong8899-custom-footer.admin.edit_footer.platform_title_placeholder')}
                   onchange={(e: Event) => {
                     const target = e.target as HTMLInputElement;
                     updateItem({ ...icon, title: target.value });
@@ -39,7 +39,7 @@ export default class PlatformIconsSection extends Component<PlatformIconsSection
               </div>
 
               <div className="Form-group">
-                <label>{app.translator.trans('core.admin.edit_footer.platform_url')}</label>
+                <label>{app.translator.trans('wusong8899-custom-footer.admin.edit_footer.platform_url')}</label>
                 <input
                   className="FormControl"
                   type="url"
@@ -55,7 +55,7 @@ export default class PlatformIconsSection extends Component<PlatformIconsSection
               <ImageEditor
                 image={{ imageUrl: icon.iconUrl, altText: icon.title }}
                 onUpdate={(image) => updateItem({ ...icon, iconUrl: image.imageUrl })}
-                urlLabel={app.translator.trans('core.admin.edit_footer.platform_icon_url')}
+                urlLabel={app.translator.trans('wusong8899-custom-footer.admin.edit_footer.platform_icon_url')}
                 altLabel=""
                 showPreview={true}
               />
@@ -65,16 +65,16 @@ export default class PlatformIconsSection extends Component<PlatformIconsSection
                   type="button"
                   className="Button Button--danger"
                   onclick={removeItem}
-                  title={app.translator.trans('core.admin.edit_footer.remove_platform')}
+                  title={app.translator.trans('wusong8899-custom-footer.admin.edit_footer.remove_platform')}
                 >
                   <i className="fas fa-trash"></i>
-                  {app.translator.trans('core.admin.edit_footer.remove')}
+                  {app.translator.trans('wusong8899-custom-footer.admin.edit_footer.remove')}
                 </button>
               </div>
             </div>
           )}
-          title={sectionTitle || app.translator.trans('core.admin.edit_footer.platform_icons')}
-          addButtonText={app.translator.trans('core.admin.edit_footer.add_platform_icon')}
+          title={sectionTitle || app.translator.trans('wusong8899-custom-footer.admin.edit_footer.platform_icons')}
+          addButtonText={app.translator.trans('wusong8899-custom-footer.admin.edit_footer.add_platform_icon')}
           allowReorder={true}
         />
         

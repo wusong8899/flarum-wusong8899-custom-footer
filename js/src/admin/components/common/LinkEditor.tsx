@@ -18,8 +18,8 @@ export interface LinkEditorAttrs extends ComponentAttrs {
 export default class LinkEditor extends Component<LinkEditorAttrs> {
   view() {
     const { link, onUpdate, onRemove, showRemove = true } = this.attrs;
-    const titleLabel = this.attrs.titleLabel || app.translator.trans('core.admin.edit_footer.link_title');
-    const urlLabel = this.attrs.urlLabel || app.translator.trans('core.admin.edit_footer.link_url');
+    const titleLabel = this.attrs.titleLabel || app.translator.trans('wusong8899-custom-footer.admin.edit_footer.link_title');
+    const urlLabel = this.attrs.urlLabel || app.translator.trans('wusong8899-custom-footer.admin.edit_footer.link_url');
 
     return (
       <div className="FooterConfig-linkEditor">
@@ -29,7 +29,7 @@ export default class LinkEditor extends Component<LinkEditorAttrs> {
             className="FormControl"
             type="text"
             value={link.title}
-            placeholder={app.translator.trans('core.admin.edit_footer.link_title_placeholder')}
+            placeholder={app.translator.trans('wusong8899-custom-footer.admin.edit_footer.link_title_placeholder')}
             onchange={(e: Event) => {
               const target = e.target as HTMLInputElement;
               onUpdate({ ...link, title: target.value });
@@ -55,7 +55,7 @@ export default class LinkEditor extends Component<LinkEditorAttrs> {
                 type="button"
                 className="Button Button--danger FooterConfig-removeBtn"
                 onclick={onRemove}
-                title={app.translator.trans('core.admin.edit_footer.remove_link')}
+                title={app.translator.trans('wusong8899-custom-footer.admin.edit_footer.remove_link')}
               >
                 <i className="fas fa-times"></i>
               </button>

@@ -14,19 +14,19 @@ export default class FooterLogoSection extends Component<FooterLogoSectionAttrs>
 
     return (
       <div className="FooterConfig-section FooterConfig-footerLogo">
-        <h3>{app.translator.trans('core.admin.edit_footer.footer_logo')}</h3>
+        <h3>{app.translator.trans('wusong8899-custom-footer.admin.edit_footer.footer_logo')}</h3>
         
         <ImageEditor
           image={footerLogo}
           onUpdate={onUpdate}
-          urlLabel={app.translator.trans('core.admin.edit_footer.logo_url')}
-          altLabel={app.translator.trans('core.admin.edit_footer.logo_alt')}
+          urlLabel={app.translator.trans('wusong8899-custom-footer.admin.edit_footer.logo_url')}
+          altLabel={app.translator.trans('wusong8899-custom-footer.admin.edit_footer.logo_alt')}
           showPreview={true}
         />
 
         <div className="Form-group">
           <small className="help-block">
-            {app.translator.trans('core.admin.edit_footer.footer_logo_help')}
+            {app.translator.trans('wusong8899-custom-footer.admin.edit_footer.footer_logo_help')}
           </small>
         </div>
       </div>

@@ -12,15 +12,15 @@ export default class CopyrightSection extends Component<CopyrightSectionAttrs> {
 
     return (
       <div className="FooterConfig-section FooterConfig-copyright">
-        <h3>{app.translator.trans('core.admin.edit_footer.copyright')}</h3>
+        <h3>{app.translator.trans('wusong8899-custom-footer.admin.edit_footer.copyright')}</h3>
         
         <div className="Form-group">
-          <label>{app.translator.trans('core.admin.edit_footer.copyright_text')}</label>
+          <label>{app.translator.trans('wusong8899-custom-footer.admin.edit_footer.copyright_text')}</label>
           <textarea
             className="FormControl"
             rows="4"
             value={copyrightText}
-            placeholder={app.translator.trans('core.admin.edit_footer.copyright_placeholder')}
+            placeholder={app.translator.trans('wusong8899-custom-footer.admin.edit_footer.copyright_placeholder')}
             onchange={(e: Event) => {
               const target = e.target as HTMLTextAreaElement;
               onUpdate(target.value);
@@ -30,7 +30,7 @@ export default class CopyrightSection extends Component<CopyrightSectionAttrs> {
 
         <div className="Form-group">
           <small className="help-block">
-            {app.translator.trans('core.admin.edit_footer.copyright_help')}
+            {app.translator.trans('wusong8899-custom-footer.admin.edit_footer.copyright_help')}
           </small>
         </div>
       </div>

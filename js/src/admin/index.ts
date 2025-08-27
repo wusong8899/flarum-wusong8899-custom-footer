@@ -5,7 +5,7 @@ export { default as extend } from './extend';
 
 app.initializers.add('wusong8899-custom-footer', () => {
   console.log('[wusong8899/flarum-custom-footer] Hello, admin!');
-  
+
   // Register the footer config modal
   app.extensionData
     .for('wusong8899-custom-footer')

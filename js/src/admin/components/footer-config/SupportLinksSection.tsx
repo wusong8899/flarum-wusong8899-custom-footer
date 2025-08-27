@@ -24,18 +24,18 @@ export default class SupportLinksSection extends Component<SupportLinksSectionAt
               link={link}
               onUpdate={updateItem}
               onRemove={removeItem}
-              titleLabel={app.translator.trans('core.admin.edit_footer.support_link_title')}
-              urlLabel={app.translator.trans('core.admin.edit_footer.support_link_url')}
+              titleLabel={app.translator.trans('wusong8899-custom-footer.admin.edit_footer.support_link_title')}
+              urlLabel={app.translator.trans('wusong8899-custom-footer.admin.edit_footer.support_link_url')}
             />
           )}
-          title={app.translator.trans('core.admin.edit_footer.support_links')}
-          addButtonText={app.translator.trans('core.admin.edit_footer.add_support_link')}
+          title={app.translator.trans('wusong8899-custom-footer.admin.edit_footer.support_links')}
+          addButtonText={app.translator.trans('wusong8899-custom-footer.admin.edit_footer.add_support_link')}
           allowReorder={true}
         />
         
         <div className="Form-group">
           <small className="help-block">
-            {app.translator.trans('core.admin.edit_footer.support_links_help')}
+            {app.translator.trans('wusong8899-custom-footer.admin.edit_footer.support_links_help')}
           </small>
         </div>
       </div>
