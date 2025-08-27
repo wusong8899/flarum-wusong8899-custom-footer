@@ -1,0 +1,86 @@
+wusong8899-custom-footer:
+  admin:
+    my_cool_key: 我的酷键
+    edit_footer:
+      config_title: 配置自定义页脚
+      config_button: 配置页脚
+      
+      # 标签页
+      tab_support_links: 支持链接
+      tab_platform_icons: 平台图标
+      tab_platform_links: 平台链接
+      tab_brand_ambassador: 品牌代言人
+      tab_footer_logo: 页脚Logo
+      tab_copyright: 版权信息
+      
+      # 通用
+      link_title: 标题
+      link_url: 链接
+      link_title_placeholder: 输入链接标题
+      link_url_placeholder: https://example.com
+      remove_link: 删除链接
+      remove: 删除
+      add_item: 添加项目
+      preview: 预览
+      preview_title: 页脚预览
+      reset_defaults: 重置为默认
+      reset_confirm: 确定要重置所有设置为默认值吗？这将覆盖您当前的所有配置。
+      
+      # 支持链接
+      support_links: 支持链接
+      support_link_title: 链接标题
+      support_link_url: 链接地址
+      add_support_link: 添加支持链接
+      support_links_help: 配置页脚第一栏显示的支持链接。
+      
+      # 平台图标
+      platform_icons: 平台图标
+      platform_title: 平台名称
+      platform_title_placeholder: 如：币安
+      platform_url: 平台链接
+      platform_icon_url: 图标链接
+      add_platform_icon: 添加平台图标
+      remove_platform: 删除平台
+      platform_icons_help: 配置加密货币平台图标和链接。
+      
+      # 平台链接
+      platform_links: 平台链接
+      platform_links_help: 配置显示为按钮的额外平台链接。
+      
+      # 品牌代言人
+      brand_ambassador: 品牌代言人
+      ambassador_image: 代言人图片
+      ambassador_image_url: 图片链接
+      social_links: 社交链接
+      social_title: 链接标题
+      social_title_placeholder: 如：QQ群
+      social_url: 链接地址
+      social_icon_url: 图标链接
+      add_social_link: 添加社交链接
+      remove_social_link: 删除社交链接
+      brand_ambassador_help: 配置品牌代言人区域的图片和社交链接。
+      
+      # 页脚Logo
+      footer_logo: 页脚Logo
+      logo_url: Logo链接
+      logo_alt: Logo替代文字
+      footer_logo_help: 配置主页脚Logo和替代文字。
+      
+      # 版权信息
+      copyright: 版权信息
+      copyright_text: 版权文字
+      copyright_placeholder: 输入版权文字...
+      copyright_help: 配置页脚底部显示的版权文字。
+      
+      # 图片编辑器
+      image_url: 图片链接
+      image_alt: 替代文字
+      image_alt_placeholder: 输入替代文字
+      image_load_error: 图片加载失败
+      
+      # 消息
+      load_error: 加载页脚配置失败
+      save_error: 保存页脚配置失败
+      save_success: 页脚配置保存成功
+
+  forum:

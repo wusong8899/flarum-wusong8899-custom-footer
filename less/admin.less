@@ -1,0 +1,221 @@
+// Footer Config Modal Styles
+.EditCustomFooterConfigModal {
+  .Modal-body {
+    padding: 0;
+  }
+}
+
+.FooterConfig-container {
+  display: flex;
+  flex-direction: column;
+  height: 70vh;
+  min-height: 500px;
+}
+
+.FooterConfig-tabs {
+  border-bottom: 1px solid #ddd;
+  background: #f8f9fa;
+}
+
+.FooterConfig-tabNav {
+  display: flex;
+  overflow-x: auto;
+  padding: 0 20px;
+}
+
+.FooterConfig-tabBtn {
+  flex: none;
+  padding: 12px 16px;
+  border: none;
+  background: none;
+  color: #666;
+  font-size: 13px;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:hover {
+    background: #e9ecef;
+  }
+
+  &--active {
+    color: #007bff;
+    border-bottom-color: #007bff;
+  }
+
+  i {
+    margin-right: 6px;
+  }
+}
+
+.FooterConfig-tabContent {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.FooterConfig-section {
+  margin-bottom: 30px;
+
+  h3 {
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+  }
+}
+
+.FooterConfig-listManager {
+  .FooterConfig-listItems {
+    margin-bottom: 15px;
+  }
+
+  .FooterConfig-listItem {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: #f8f9fa;
+
+    &--draggable {
+      cursor: move;
+    }
+  }
+
+  .FooterConfig-dragHandle {
+    margin-right: 10px;
+    padding: 5px;
+    color: #999;
+    cursor: grab;
+
+    &:active {
+      cursor: grabbing;
+    }
+  }
+
+  .FooterConfig-itemContent {
+    flex: 1;
+  }
+
+  .FooterConfig-addButton {
+    i {
+      margin-right: 6px;
+    }
+  }
+}
+
+.FooterConfig-linkEditor,
+.FooterConfig-imageEditor {
+  .Form-group {
+    margin-bottom: 15px;
+  }
+}
+
+.FooterConfig-urlInput {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  .FormControl {
+    flex: 1;
+  }
+
+  .FooterConfig-removeBtn {
+    flex: none;
+    min-width: auto;
+    padding: 8px 10px;
+  }
+}
+
+.FooterConfig-imagePreview {
+  margin-top: 8px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  text-align: center;
+  background: #fff;
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.FooterConfig-imageError {
+  color: #dc3545;
+  font-size: 12px;
+}
+
+.FooterConfig-platformIcon,
+.FooterConfig-socialLink {
+  .FooterConfig-itemActions {
+    margin-top: 15px;
+    text-align: right;
+  }
+}
+
+.FooterConfig-brandAmbassador {
+  .FooterConfig-socialLinks {
+    margin-top: 20px;
+  }
+
+  .FooterConfig-socialLinkInputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 15px;
+
+    .FooterConfig-imageEditor {
+      grid-column: span 2;
+    }
+  }
+}
+
+.FooterConfig-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-top: 1px solid #ddd;
+  background: #f8f9fa;
+
+  .Button {
+    margin-left: 8px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+// Mobile responsiveness
+@media (max-width: 768px) {
+  .FooterConfig-tabNav {
+    flex-wrap: wrap;
+  }
+
+  .FooterConfig-tabBtn {
+    flex: 1;
+    min-width: 120px;
+  }
+
+  .FooterConfig-socialLinkInputs {
+    grid-template-columns: 1fr;
+
+    .FooterConfig-imageEditor {
+      grid-column: span 1;
+    }
+  }
+
+  .FooterConfig-actions {
+    flex-direction: column;
+    gap: 10px;
+
+    .Button {
+      margin: 0;
+      width: 100%;
+    }
+  }
+}

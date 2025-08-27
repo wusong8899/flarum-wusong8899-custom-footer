@@ -1,0 +1,88 @@
+wusong8899-custom-footer:
+  # For more details on the format
+  # Checkout https://docs.flarum.org/2.x/extend/i18n/#appendix-a-standard-key-format
+  admin:
+    my_cool_key: My Cool Key
+    edit_footer:
+      config_title: Configure Custom Footer
+      config_button: Configure Footer
+      
+      # Tabs
+      tab_support_links: Support Links
+      tab_platform_icons: Platform Icons
+      tab_platform_links: Platform Links
+      tab_brand_ambassador: Brand Ambassador
+      tab_footer_logo: Footer Logo
+      tab_copyright: Copyright
+      
+      # Common
+      link_title: Title
+      link_url: URL
+      link_title_placeholder: Enter link title
+      link_url_placeholder: https://example.com
+      remove_link: Remove Link
+      remove: Remove
+      add_item: Add Item
+      preview: Preview
+      preview_title: Footer Preview
+      reset_defaults: Reset to Defaults
+      reset_confirm: Are you sure you want to reset all settings to defaults? This will overwrite all your current configuration.
+      
+      # Support Links
+      support_links: Support Links
+      support_link_title: Link Title
+      support_link_url: Link URL
+      add_support_link: Add Support Link
+      support_links_help: Configure the support links displayed in the first column of the footer.
+      
+      # Platform Icons
+      platform_icons: Platform Icons
+      platform_title: Platform Name
+      platform_title_placeholder: e.g. Binance
+      platform_url: Platform URL
+      platform_icon_url: Icon URL
+      add_platform_icon: Add Platform Icon
+      remove_platform: Remove Platform
+      platform_icons_help: Configure cryptocurrency platform icons with links.
+      
+      # Platform Links
+      platform_links: Platform Links
+      platform_links_help: Configure additional platform links displayed as buttons.
+      
+      # Brand Ambassador
+      brand_ambassador: Brand Ambassador
+      ambassador_image: Ambassador Image
+      ambassador_image_url: Image URL
+      social_links: Social Links
+      social_title: Link Title
+      social_title_placeholder: e.g. QQ Group
+      social_url: Link URL
+      social_icon_url: Icon URL
+      add_social_link: Add Social Link
+      remove_social_link: Remove Social Link
+      brand_ambassador_help: Configure the brand ambassador section with image and social links.
+      
+      # Footer Logo
+      footer_logo: Footer Logo
+      logo_url: Logo URL
+      logo_alt: Logo Alt Text
+      footer_logo_help: Configure the main footer logo and alt text.
+      
+      # Copyright
+      copyright: Copyright
+      copyright_text: Copyright Text
+      copyright_placeholder: Enter copyright text...
+      copyright_help: Configure the copyright text displayed at the bottom of the footer.
+      
+      # Image Editor
+      image_url: Image URL
+      image_alt: Alt Text
+      image_alt_placeholder: Enter alt text
+      image_load_error: Failed to load image
+      
+      # Messages
+      load_error: Failed to load footer configuration
+      save_error: Failed to save footer configuration
+      save_success: Footer configuration saved successfully
+
+  forum:
